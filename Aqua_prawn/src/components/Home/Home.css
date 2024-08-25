@@ -1,0 +1,11 @@
+.home {
+    background-color: aliceblue;
+    background-attachment: fixed;
+    min-height: 100vh; 
+    padding: 20px;
+  }
+  
+  .home h1 {
+    color: white; 
+  }
+  

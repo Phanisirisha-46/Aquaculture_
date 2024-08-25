@@ -1,0 +1,19 @@
+.heading-prawn {
+    text-align: center;
+    margin-top: 30px;
+    border: 2px solid black;
+    width: 250px;
+    margin-left:  30px;
+    margin-right: auto;
+    background-color: rgb(244, 246, 248);
+    border-radius: 25px;
+    padding: 10px;
+    color: var(--medium-dark);
+    box-shadow: 2px 3px 4px whitesmoke;
+    transition: transform 0.3s ease;
+  }
+  
+  .heading-prawn:hover {
+    transform: scale(1.1);
+  }
+  
