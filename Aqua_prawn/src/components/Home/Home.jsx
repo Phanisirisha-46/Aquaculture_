@@ -83,7 +83,7 @@ const Home = () => {
       {prawns.map((prawn, index) => (
         <div className="prawn-card" key={index}>
           <img src={prawn.image} alt={prawn.name} className="prawn-image" />
-          <h3>{prawn.name}</h3>
+          <h3 className='naming'>{prawn.name}</h3>
           <p><strong>Scientific Name:</strong> {prawn.scientificName}</p>
           <p><strong>Place Found:</strong> {prawn.placeFound}</p>
           <a href={prawn.link} target="_blank" rel="reference" className="prawn-button">

@@ -33,4 +33,6 @@
     height: auto;
     border-radius: 8px;
   }
-  
+  .name{
+    text-shadow: 3px 2px 3px white;
+  }

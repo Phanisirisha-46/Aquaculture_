@@ -53,3 +53,7 @@
 .prawn-button:hover {
   background-color: #0056b3;
 }
+
+.naming{
+  text-shadow:3px 2px 3px white;
+}
