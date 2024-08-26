@@ -17,7 +17,7 @@ function Footer() {
       
     
       <li className='nav-item'>
-        <Link to="aboutus" className='nav-link '>
+        <Link to="gallery" className='nav-link '>
         <TfiGallery  className='fs-4 text-black'/>Gallery</Link>
       </li>
       <li className='nav-item'>

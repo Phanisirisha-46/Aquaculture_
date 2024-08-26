@@ -18,6 +18,7 @@ import Weather from './components/Weather/Weather';
 import News from './components/News/News';
 import Graph from './components/Graph/Graph';
 import Forum from './components/Forum/Forum';
+import Gallery from './components/Gallery/Gallery';
 
 function App() {
   
@@ -83,6 +84,10 @@ function App() {
       {
         path:'/forum',
         element:<Forum/>,
+      },
+      {
+        path:'/gallery',
+        element:<Gallery/>,
       },
     ]
   }

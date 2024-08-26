@@ -1,0 +1,35 @@
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    position: relative;
+    bottom: 2px;
+  }
+  
+  .news-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .news-content {
+    padding: 15px;
+  }
+  
+  .news-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .news-content p {
+    margin: 0.5rem 0;
+  }
+  
