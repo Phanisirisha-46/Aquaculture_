@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   
   .prawn-image {
@@ -28,3 +29,28 @@
     color: black;
   }
   
+  .prawn-container9 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  .prawn-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .prawn-container4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }

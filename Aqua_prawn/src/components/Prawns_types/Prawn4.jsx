@@ -4,7 +4,7 @@ import img1 from '../../assets/img4.png';
 
 export default function Prawn4() {
   return (
-    <div className="prawn-container">
+    <div className="prawn-container4">
       <div className="prawn-image">
       <img 
           src={img1} 
