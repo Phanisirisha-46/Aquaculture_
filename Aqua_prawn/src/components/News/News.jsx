@@ -42,6 +42,10 @@ const News = () => {
         </div>
       <div className="news-card">
         <img src={m2} alt="Prawn News 5" />
+        <div className="news-content">
+          <h2>Bright - Red Syndrome</h2>
+          </div>
+
       </div>
       <div className="news-card">
         <img src={m3} alt="Prawn News 6" />
