@@ -1,0 +1,30 @@
+.prawn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .prawn-image {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .prawn-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .prawn-details {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+  
+  }
+  
+  .prawn-details h1 {
+    margin-top: 0;
+    color: black;
+  }
+  

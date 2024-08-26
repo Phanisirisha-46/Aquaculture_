@@ -22,19 +22,19 @@ function Header() {
       </li>
         
       <li className='nav-item'>
-        <Link to="register" className='nav-link '>
+        <Link to="weather" className='nav-link '>
         <TiWeatherCloudy className='fs-4 text-black'/>Weather</Link>
       </li>
       <li className='nav-item'>
-        <Link to="aboutus" className='nav-link '>
+        <Link to="news" className='nav-link '>
         <FaRegNewspaper   className='fs-4 text-black'/>News</Link>
       </li>
       <li className='nav-item'>
-        <Link to="aboutus" className='nav-link '>
+        <Link to="graph" className='nav-link '>
         <GoGraph className='fs-4 text-black'/>Graphs</Link>
       </li>
       <li className='nav-item'>
-        <Link to="aboutus" className='nav-link '>
+        <Link to="forum" className='nav-link '>
         <IoMdInformationCircle  className='fs-4 text-black'/>Community Forum</Link>
       </li>
      
