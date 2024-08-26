@@ -34,8 +34,8 @@ function Header() {
         <GoGraph className='fs-4 text-black'/>Graphs</Link>
       </li>
       <li className='nav-item'>
-        <Link to="forum" className='nav-link '>
-        <IoMdInformationCircle  className='fs-4 text-black'/>Community Forum</Link>
+        <Link to="qanda" className='nav-link '>
+        <IoMdInformationCircle  className='fs-4 text-black'/>Q&A Section</Link>
       </li>
      
     </ul>

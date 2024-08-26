@@ -17,7 +17,7 @@ import Prawn9 from './components/Prawns_types/Prawn9';
 import Weather from './components/Weather/Weather';
 import News from './components/News/News';
 import Graph from './components/Graph/Graph';
-import Forum from './components/Forum/Forum';
+import QandA from './components/Forum/QandA';
 import Gallery from './components/Gallery/Gallery';
 
 function App() {
@@ -82,8 +82,8 @@ function App() {
         element:<Graph/>,
       },
       {
-        path:'/forum',
-        element:<Forum/>,
+        path:'/qanda',
+        element:<QandA/>,
       },
       {
         path:'/gallery',
