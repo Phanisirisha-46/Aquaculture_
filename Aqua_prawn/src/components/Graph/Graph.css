@@ -1,19 +1,53 @@
 .graph-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* Space between items */
-    padding: 20px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: space-between; /* Space out items evenly */
+}
+
+.graph-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px); /* Takes up 50% of width minus gap */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.graph-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
   .graph-container {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      flex: 1 1 calc(100% - 20px); /* Full width on medium screens */
   }
-  
+}
+
+@media (max-width: 768px) {
+  .graph-grid {
+      gap: 15px; /* Reduce gap size */
+      padding: 10px; /* Reduce padding */
+  }
+
+  .graph-container {
+      padding: 15px; /* Reduce container padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .graph-grid {
+      gap: 10px; /* Further reduce gap size */
+      padding: 5px; /* Further reduce padding */
+  }
+
+  .graph-container {
+      padding: 10px; /* Further reduce container padding */
+  }
+
   .graph-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+      font-size: 1.2rem; /* Reduce font size for headers */
   }
-  
+}

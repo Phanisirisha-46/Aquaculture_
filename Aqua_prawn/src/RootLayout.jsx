@@ -8,7 +8,7 @@ function RootLayout() {
     <div>
         <Header/>
           <h4 className="heading-prawn">Aquaculture - Prawn</h4>
-            <div style={{minHeight:"60.7vh"}} className='container'> 
+            <div style={{minHeight:"57.5vh"}} className='container'> 
                 <Outlet/>
             </div>
         <Footer/>
