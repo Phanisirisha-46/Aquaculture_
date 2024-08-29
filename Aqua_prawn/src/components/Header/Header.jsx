@@ -14,7 +14,7 @@ function Header() {
     <div className='d-flex flex-wrap justify-content-around header'>
         <img src={logo} alt="logo" className="logo-image"  />
       <h1
-      className='text-dark'>AquaCulture</h1>
+      className='text-dark'>AquaShrimp</h1>
     <ul className='nav fs-5 p-3'>
     <li>
         <Link to="home" className='nav-link '>
