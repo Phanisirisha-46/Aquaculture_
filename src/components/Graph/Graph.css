@@ -4,6 +4,7 @@
   gap: 20px;
   padding: 20px;
   justify-content: space-between; /* Space out items evenly */
+  animation: fadeInGrid 1.5s ease-in-out;
 }
 
 .graph-container {
@@ -13,41 +14,76 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1 1 calc(50% - 20px); /* Takes up 50% of width minus gap */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUpGraph 1.2s ease-in-out;
+}
+
+.graph-container:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Intensify shadow */
 }
 
 .graph-container h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: color 0.3s ease;
+}
+
+.graph-container h2:hover {
+  color: #16a085; /* Change color on hover */
 }
 
 @media (max-width: 1024px) {
   .graph-container {
-      flex: 1 1 calc(100% - 20px); /* Full width on medium screens */
+    flex: 1 1 calc(100% - 20px); /* Full width on medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .graph-grid {
-      gap: 15px; /* Reduce gap size */
-      padding: 10px; /* Reduce padding */
+    gap: 15px; /* Reduce gap size */
+    padding: 10px; /* Reduce padding */
   }
 
   .graph-container {
-      padding: 15px; /* Reduce container padding */
+    padding: 15px; /* Reduce container padding */
   }
 }
 
 @media (max-width: 480px) {
   .graph-grid {
-      gap: 10px; /* Further reduce gap size */
-      padding: 5px; /* Further reduce padding */
+    gap: 10px; /* Further reduce gap size */
+    padding: 5px; /* Further reduce padding */
   }
 
   .graph-container {
-      padding: 10px; /* Further reduce container padding */
+    padding: 10px; /* Further reduce container padding */
   }
 
   .graph-container h2 {
-      font-size: 1.2rem; /* Reduce font size for headers */
+    font-size: 1.2rem; /* Reduce font size for headers */
+  }
+}
+
+/* Animations */
+@keyframes fadeInGrid {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpGraph {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

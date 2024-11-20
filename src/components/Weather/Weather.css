@@ -1,38 +1,122 @@
-/* src/components/Weather.css */
 .weather-container {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    bottom: 2px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.weather-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  font-size: 2rem;
+  animation: slideInFromTop 1.2s ease-in-out;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.text-section {
+  flex: 1;
+  animation: fadeInLeft 1.2s ease-in-out;
+}
+
+.image-section {
+  flex: 1;
+  text-align: right;
+  animation: fadeInRight 1.2s ease-in-out;
+}
+
+.image-section img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+  text-shadow: 3px 2px 3px white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #34495e;
+  transition: color 0.3s ease;
+}
+
+.name:hover {
+  color: #16a085;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .weather-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
+  to {
+    opacity: 1;
   }
-  
-  .flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
   }
-  
-  .text-section {
-    flex: 1;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .image-section {
-    flex: 1;
-    text-align: right;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
   }
-  
-  .image-section img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  .name{
-    text-shadow: 3px 2px 3px white;
+}
+
+@keyframes fadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
   }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Button Styling (optional if needed for dynamic inputs) */
+input,
+select {
+  width: 100%;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #16a085;
+  box-shadow: 0 0 8px rgba(22, 160, 133, 0.3);
+}

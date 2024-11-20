@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './QandA.css';
 
 const QandA = () => {
@@ -6,6 +6,18 @@ const QandA = () => {
   const [questionText, setQuestionText] = useState('');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(null);
   const [replyText, setReplyText] = useState('');
+  const [adminPassword, setAdminPassword] = useState('');
+
+  useEffect(() => {
+    // Load questions and replies from localStorage when the component mounts
+    const savedQuestions = JSON.parse(localStorage.getItem('questions')) || [];
+    setQuestions(savedQuestions);
+  }, []);
+
+  useEffect(() => {
+    // Store questions and replies to localStorage whenever they change
+    localStorage.setItem('questions', JSON.stringify(questions));
+  }, [questions]);
 
   const handleQuestionChange = (e) => {
     setQuestionText(e.target.value);
@@ -33,6 +45,16 @@ const QandA = () => {
     }
   };
 
+  const handleDeleteQuestion = (index) => {
+    const password = prompt('Enter admin password to delete this question:');
+    if (password === 'saru') {
+      const updatedQuestions = questions.filter((_, i) => i !== index);
+      setQuestions(updatedQuestions);
+    } else {
+      alert('Incorrect password!');
+    }
+  };
+
   return (
     <div className="qna-container">
       <h1>Q&A Section</h1>
@@ -56,6 +78,12 @@ const QandA = () => {
                 className="reply-button"
               >
                 Reply
+              </button>
+              <button
+                onClick={() => handleDeleteQuestion(index)}
+                className="delete-button"
+              >
+                🗑️  Delete 
               </button>
               {currentQuestionIndex === index && (
                 <div className="reply-form">

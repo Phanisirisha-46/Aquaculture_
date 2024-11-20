@@ -1,38 +1,100 @@
 .news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    position: relative;
-    bottom: 2px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  position: relative;
+  bottom: 2px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.news-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1.2s ease-in-out;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.news-card img:hover {
+  transform: scale(1.1);
+}
+
+.news-content {
+  padding: 15px;
+  animation: fadeInContent 1.5s ease-in-out;
+}
+
+.news-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease;
+}
+
+.news-content h2:hover {
+  color: #16a085;
+}
+
+.news-content p {
+  margin: 0.5rem 0;
+  color: #34495e;
+}
+
+.high {
+  text-shadow: 3px 2px 3px white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.high:hover {
+  color: #e74c3c;
+  text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .news-card {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  to {
+    opacity: 1;
   }
-  
-  .news-card img {
-    width: 100%;
-    height: auto;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
   }
-  
-  .news-content {
-    padding: 15px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .news-content h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
   }
-  
-  .news-content p {
-    margin: 0.5rem 0;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  .high{
-    text-shadow: 3px 2px 3px white;
-  }
+}
