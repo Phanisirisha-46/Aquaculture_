@@ -47,7 +47,7 @@ const QandA = () => {
 
   const handleDeleteQuestion = (index) => {
     const password = prompt('Enter admin password to delete this question:');
-    if (password === 'saru') {
+    if (password === 'siri') {
       const updatedQuestions = questions.filter((_, i) => i !== index);
       setQuestions(updatedQuestions);
     } else {
